@@ -1,0 +1,29 @@
+.camper-leaderboard{
+  .title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .options{
+    text-align: center;
+
+    button.active{
+      border: 2px solid black;
+      font-weight: 600;
+    }
+  }
+
+  .points-table{
+    margin-top: 20px;
+
+    > thead, > tbody{
+      width: 100%;
+    }
+
+    th.number{
+      text-align: center;
+    }
+  }
+}

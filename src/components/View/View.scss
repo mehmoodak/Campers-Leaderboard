@@ -1,0 +1,16 @@
+.camper-row {
+
+  > td, > th{
+      vertical-align: middle;
+  }
+
+  td.number{
+    text-align: center;
+  }
+
+  .camper-picture {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+}
