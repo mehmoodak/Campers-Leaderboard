@@ -13,16 +13,21 @@ export function changeOrderStatus(order) {
 export function loadCampers(order = 'recent') {
   let url = 'https://fcctop100.herokuapp.com/api/fccusers/top/' + order;
   return function (dispatch) {
-    return fetch(url)
+    return fetch(url, {mode: 'no-cors'})
         .then(
             response => response.json(),
             error => console.log('Error Occured: ' + error)
         ).then(data => {
           console.log('Data has been loaded.', data);
-          dispatch({
-            type: LOAD_CAMPERS,
-            campers: data
-          });
+
+          if(data){
+            dispatch({
+              type: LOAD_CAMPERS,
+              campers: data
+            });
+          }else{
+            alert("Data is unavailable.");
+          }
         });
   }
 }
